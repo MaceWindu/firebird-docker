@@ -27,6 +27,7 @@ apt-get install -qy --no-install-recommends \
     libtomcrypt-dev \
     libtommath-dev \
     make \
+    cmake \
     unzip \
     xz-utils \
     zlib1g-dev
