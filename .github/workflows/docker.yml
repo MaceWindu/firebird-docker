@@ -8,7 +8,7 @@ on:
       - 'v*.*.*'
 
 env:
-  TEST_TAG: jacobalberty/firebird:test
+  TEST_TAG: linq2db/linq2db:firebird5-test
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
       - name: Prepare
         id: prep
         run: |
-          DOCKER_IMAGE=jacobalberty/firebird
+          DOCKER_IMAGE=linq2db/linq2db:firebird5
           VERSION=noop
           if [ "${{ github.event_name }}" = "schedule" ]; then
             VERSION=nightly
