@@ -8,7 +8,7 @@ on:
       - 'v*.*.*'
 
 env:
-  TEST_TAG: jacobalberty/firebird:test
+  TEST_TAG: linq2db/linq2db:firebird5-test
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
       - name: Prepare
         id: prep
         run: |
-          DOCKER_IMAGE=jacobalberty/firebird
+          DOCKER_IMAGE=linq2db/linq2db:firebird5
           VERSION=noop
           if [ "${{ github.event_name }}" = "schedule" ]; then
             VERSION=nightly
@@ -33,7 +33,7 @@ jobs:
           elif [[ $GITHUB_REF == refs/pull/* ]]; then
             VERSION=pr-${{ github.event.number }}
           fi
-          TAGS="${DOCKER_IMAGE}:${VERSION}"
+          TAGS="${DOCKER_IMAGE}"
           if [[ $VERSION =~ ^v[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
             MINOR=${VERSION%.*}
             MAJOR=${MINOR%.*}

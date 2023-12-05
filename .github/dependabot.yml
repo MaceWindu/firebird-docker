@@ -6,11 +6,11 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule: {interval: daily}
-    reviewers: [jacobalberty]
-    assignees: [jacobalberty]
+    reviewers: [macewindu]
+    assignees: [macewindu]
 
   - package-ecosystem: docker
     directory: /
     schedule: {interval: daily}
-    reviewers: [jacobalberty]
-    assignees: [jacobalberty]
+    reviewers: [macewindu]
+    assignees: [macewindu]
